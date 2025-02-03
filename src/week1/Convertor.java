@@ -6,9 +6,9 @@ public class Convertor {
 
     public boolean[] dec2bin(int decInput) {
         boolean[] bin = new boolean[8];
-        int count = 1;
+        int count = 0;
         int copyDec = decInput;
-        while (copyDec > 1) {
+        while (copyDec > 0) {
             copyDec /= 2;
             count++;
         }
