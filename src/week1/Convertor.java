@@ -35,4 +35,18 @@ public class Convertor {
         }
         return answer;
     }
+
+    public static void main(String[] args) {
+        Convertor convertor = new Convertor();
+
+        int decInput = 50;
+        System.out.print(decInput + " -> ");
+        boolean[] binOutput = convertor.dec2bin(decInput);
+        System.out.println(Arrays.toString(binOutput));
+
+        boolean[] binInput = new boolean[]{true, true, false, false, true};
+        System.out.print(Arrays.toString(binInput) + " -> ");
+        int decOutput = convertor.bin2dec(binInput);
+        System.out.println(decOutput);
+    }
 }
