@@ -37,6 +37,19 @@ public class Convertor {
         return answer;
     }
 
+    public boolean[] stringToBooleanArray(String input) {
+        String[] binArray = input.split(",");
+        boolean[] answer = new boolean[binArray.length];
+        int pos = 0;
+        for(String cell : binArray) {
+            if(cell.equals("true")) {
+                answer[pos] = true;
+            }
+            pos++;
+        }
+        return answer;
+    }
+
     public static void main(String[] args) {
         Convertor convertor = new Convertor();
         Scanner scanner = new Scanner(System.in);
@@ -49,15 +62,7 @@ public class Convertor {
 
         System.out.println("10진수로 변환할 boolean 배열을 \",\"로 구분하여 입력하세요.");
         String binInput = scanner.next();
-        String[] binArray = binInput.split(",");
-        boolean[] handledBinInput = new boolean[binArray.length];
-        int pos = 0;
-        for(String cell : binArray) {
-            if(cell.equals("true")) {
-                handledBinInput[pos] = true;
-            }
-            pos++;
-        }
+        boolean[] handledBinInput = convertor.stringToBooleanArray(binInput);
         System.out.print(Arrays.toString(handledBinInput) + " -> ");
         int decOutput = convertor.bin2dec(handledBinInput);
         System.out.println(decOutput);
