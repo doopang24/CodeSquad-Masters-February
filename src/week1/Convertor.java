@@ -1,6 +1,7 @@
 package week1;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Convertor {
 
@@ -38,15 +39,27 @@ public class Convertor {
 
     public static void main(String[] args) {
         Convertor convertor = new Convertor();
+        Scanner scanner = new Scanner(System.in);
 
-        int decInput = 50;
+        System.out.println("2진 boolean 배열로 변환할 10진수를 입력하세요.");
+        int decInput = scanner.nextInt();
         System.out.print(decInput + " -> ");
         boolean[] binOutput = convertor.dec2bin(decInput);
         System.out.println(Arrays.toString(binOutput));
 
-        boolean[] binInput = new boolean[]{true, true, false, false, true};
-        System.out.print(Arrays.toString(binInput) + " -> ");
-        int decOutput = convertor.bin2dec(binInput);
+        System.out.println("10진수로 변환할 boolean 배열을 \",\"로 구분하여 입력하세요.");
+        String binInput = scanner.next();
+        String[] binArray = binInput.split(",");
+        boolean[] handledBinInput = new boolean[binArray.length];
+        int pos = 0;
+        for(String cell : binArray) {
+            if(cell.equals("true")) {
+                handledBinInput[pos] = true;
+            }
+            pos++;
+        }
+        System.out.print(Arrays.toString(handledBinInput) + " -> ");
+        int decOutput = convertor.bin2dec(handledBinInput);
         System.out.println(decOutput);
     }
 }
