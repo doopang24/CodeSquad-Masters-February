@@ -23,4 +23,16 @@ public class Convertor {
         }
         return answer;
     }
+
+    public int bin2dec(boolean[] binInput) {
+        int binLength = binInput.length - 1;
+        int answer = 0;
+        while (binLength >= 0) {
+            if (binInput[binLength]) {
+                answer += (int) Math.pow(2, binLength);
+            }
+            binLength--;
+        }
+        return answer;
+    }
 }
