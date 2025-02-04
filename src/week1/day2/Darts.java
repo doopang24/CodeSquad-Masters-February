@@ -14,4 +14,13 @@ public class Darts {
         }
         return answer;
     }
+    private int scoreOfPlayerA(int[] eachRoundIndex) {
+        int AIndexStart = 1;
+        return calculator(AIndexStart, eachRoundIndex);
+    }
+
+    private int scoreOfPlayerB(int[] eachRoundIndex) {
+        int BIndexStart = 4;
+        return calculator(BIndexStart, eachRoundIndex);
+    }
 }
