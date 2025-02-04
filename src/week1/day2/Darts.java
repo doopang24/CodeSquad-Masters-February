@@ -23,4 +23,22 @@ public class Darts {
         int BIndexStart = 4;
         return calculator(BIndexStart, eachRoundIndex);
     }
+    private int calculator(int startIndex, int[] eachRoundIndex) {
+        int answer = 0;
+        int baseIndex = eachRoundIndex[0];
+        int[] validRange = getValidRange(baseIndex);    // 점수표에서 유효한 범위의 점수를 가져온거
+        for (int i = 0; i < 3; i++) {       // A, B의 인덱스
+            for (int j = 0; j < 3; j++) {   // 유효범위의 인덱스
+                if (20 <= baseIndex + j) {
+                    if (eachRoundIndex[i + startIndex] == baseIndex + j - 20) {
+                        answer += validRange[j];
+                    }
+                } else if (eachRoundIndex[i + startIndex] == baseIndex + j) {
+                    answer += validRange[j];
+                }
+            }
+        }
+        answer = decideBonus(answer, startIndex, eachRoundIndex);
+        return answer;
+    }
 }
