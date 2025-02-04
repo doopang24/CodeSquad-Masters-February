@@ -7,4 +7,11 @@ public class Darts {
     private int getRoundCount(int[] scoreLine) { // 게임 라운드 반환
         return scoreLine.length / 7;
     }
+    private int[] getValidRange(int startIndex) {   // 점수표에서 유효한 범위를 반환
+        int[] answer = new int[3];
+        for (int i = 0; i < 3; i++) {
+            answer[i] = SCORE_BOARD[startIndex + i];
+        }
+        return answer;
+    }
 }
