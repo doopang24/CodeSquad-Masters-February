@@ -7,4 +7,14 @@ public class Main {
         System.out.println("점수를 쉼표와 띄어쓰기로 구분해서 입력하세요.");
         return scanner.nextLine();
     }
+
+    private int[] StringToIntArray(String input) {
+        String[] inputSplit = input.split(", ");
+        int[] answer = new int[inputSplit.length];
+        for (int i = 0; i < inputSplit.length; i++) {
+            answer[i] = Integer.parseInt(inputSplit[i]);
+        }
+        return answer;
+    }
 }
+
