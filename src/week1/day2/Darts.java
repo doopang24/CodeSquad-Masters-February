@@ -47,4 +47,14 @@ public class Darts {
         }
         return answer;
     }
+
+    private String decideWinner(int scoreA, int scoreB) {
+        if (scoreA > scoreB) {
+            return ">";
+        } else if (scoreA < scoreB) {
+            return "<";
+        } else {
+            return "=";
+        }
+    }
 }
