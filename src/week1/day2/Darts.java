@@ -41,4 +41,10 @@ public class Darts {
         answer = decideBonus(answer, startIndex, eachRoundIndex);
         return answer;
     }
+    private int decideBonus(int answer, int startIndex, int[] eachRoundIndex) {
+        if (eachRoundIndex[startIndex] == eachRoundIndex[startIndex + 1] && eachRoundIndex[startIndex + 1] == eachRoundIndex[startIndex + 2] && answer != 0) {
+            answer = (answer / 3) * 4;
+        }
+        return answer;
+    }
 }
