@@ -1,6 +1,18 @@
 package week1.day2;
 
+import java.util.Scanner;
+
 public class Main {
+    public static void main(String[] args) {
+        Main main = new Main();
+        Darts darts = new Darts();
+
+        String input = main.getInput();
+        int[] scoreLine = main.StringToIntArray(input);
+
+        System.out.println(darts.solution(scoreLine));
+    }
+
     private String getInput() {
         Scanner scanner = new Scanner(System.in);
 
