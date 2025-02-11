@@ -4,16 +4,17 @@ import java.util.Random;
 
 public class SudokuGenerator {
 
-    private static final int BOARD_SIZE = 9;
-    private static final int CELL_SIZE = 3;
-    private static int[][] gameBoard;
+    private static final int BOARD_SIZE = 9;        // 보드 크기
+    private static final int CELL_SIZE = 3;         // 셀 크기
+    private static int[][] gameBoard;               // 게임판
 
+    // 생성자, 객체 생성하면 자동으로 스도쿠 배열 만듦
     public SudokuGenerator() {
         gameBoard = new int[BOARD_SIZE][BOARD_SIZE];
+        fillSudokuBoard(0, 0);
     }
 
     public int[][] getGameBoard() {
-        fillSudokuBoard(0, 0);
         return gameBoard;
     }
 
@@ -34,6 +35,16 @@ public class SudokuGenerator {
                 // 백트래킹 (되돌리기)
                 gameBoard[row][col] = 0;
             }
+        }
+        return false;
+    }
+
+    public boolean canPlaceNumber(int[] attempt) {
+        int row = attempt[0];
+        int col = attempt[1];
+        int userTry = attempt[2];   // 게임 이용자의 시도
+        if (checkRow(userTry, row) && checkColumn(userTry, col) && checkCell(userTry, row, col)) {
+            return true;
         }
         return false;
     }
@@ -70,7 +81,7 @@ public class SudokuGenerator {
         return true;
     }
 
-    // 셀(3*3) 검증
+    // 셀 (3*3) 검증
     private boolean checkCell(int num, int row, int col) {
         int startRow = (row / CELL_SIZE) * CELL_SIZE;
         int startCol = (col / CELL_SIZE) * CELL_SIZE;
@@ -82,4 +93,3 @@ public class SudokuGenerator {
         return true;
     }
 }
-
