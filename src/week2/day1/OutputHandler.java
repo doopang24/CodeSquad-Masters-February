@@ -9,10 +9,10 @@ public class OutputHandler {
         int boardSize = gameBoard[0].length;
         for (int i = 0; i < boardSize; i++) {
             if (i % 3 == 0 && i != 0) {
-                System.out.println("-----------------------------");
+                System.out.println("-----------------------------");    // 구분선
             }
             for (int j = 0; j < boardSize; j++) {
-                if (j % 3 == 0 && j != 0) System.out.print("|");
+                if (j % 3 == 0 && j != 0) System.out.print("|");        // 구분선
                 if (gameBoard[i][j] == 0) {
                     System.out.print("   ");    // 0이면 빈칸만 출력
                 } else {
@@ -21,18 +21,21 @@ public class OutputHandler {
             }
             System.out.println();
         }
+        System.out.println();
     }
 
-    public void printEasySudoku(int[][] gameBoard) {        // 비교적 쉬운 스도쿠
+    public int[][] printEasySudoku(int[][] gameBoard) {        // 비교적 쉬운 스도쿠
         int hiddenCount = random.nextInt(2) + 2;      // 숨겨진 수가 2~3개
         gameBoard = generateHiddenGameBoard(gameBoard, hiddenCount);
         printSudokuBoard(gameBoard);
+        return gameBoard;   // 쉬운 스도쿠 게임판 반환
     }
 
-    public void printHardSudoku(int[][] gameBoard) {        // 비교적 어려운 스도쿠
+    public int[][] printHardSudoku(int[][] gameBoard) {        // 비교적 어려운 스도쿠
         int hiddenCount = random.nextInt(2) + 4;      // 숨겨진 수가 4~5개
         gameBoard = generateHiddenGameBoard(gameBoard, hiddenCount);
         printSudokuBoard(gameBoard);
+        return gameBoard;   // 여러운 스도쿠 게임판 반환
     }
 
     private int[][] generateHiddenGameBoard(int[][] gameBoard, int hiddenCount) {
