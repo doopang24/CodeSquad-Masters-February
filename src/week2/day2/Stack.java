@@ -56,26 +56,9 @@ public class Stack {
         return false;
     }
 
-    // 현재 스택 포인터가 어디 있는지 반환
-    private int locationOfStackPointer() {
-        int stackPointerLocation = 0;
-        for (int i = STACK_SIZE - 1; i >= 0; i--) {
-            if (stack[i] != null) stackPointerLocation = i;
-        }
-        return stackPointerLocation;
-    }
-
-    // stack 배열이 비었는지 확인하는 함수
-    private boolean isStackEmpty() {
-        for (int i = 0; i < STACK_SIZE; i++) {
-            if (stack[i] != null) return false;
-        }
-        return true;
-    }
-
     // POP 기능
     private int pop() {
-        int lastIn = 0; // 가장 마지막에 들어온 원소
+        int lastIn; // 가장 마지막에 들어온 원소
         for (int i = STACK_SIZE - 1; i >= 0; i--) {
             if (stack[i] != null) {
                 lastIn = stack[i];
