@@ -8,7 +8,7 @@ import java.util.Stack;
 public class StackManager {
 
     private static Map<Integer, Stack<String>> deskStatus = new HashMap<>();
-    private static Stack<String> desk1, desk2, desk3;
+    private Stack<String> desk1, desk2, desk3;
 
     StackManager() {
         desk1 = new Stack<>();

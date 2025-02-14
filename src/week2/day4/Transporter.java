@@ -1,13 +1,11 @@
 package week2.day4;
 
-import java.util.List;
-
 public class Transporter {
 
     static Printer printer = new Printer();
     static StackManager manager = new StackManager();
-    static List<List<String>> transportStatus;
     static int step = 1;
+
 
     public void transportController(int requiredStep) {
         int numberOfParts = 3;
