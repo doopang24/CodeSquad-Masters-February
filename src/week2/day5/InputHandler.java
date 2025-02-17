@@ -13,6 +13,7 @@ public class InputHandler {
     private static final String INITIALIZATION = "CREATE TABLE";
     private static final String INSERTION = "INSERT INTO";
 
+    // Map<String, Map<String, String>> 으로 수정하면 좋겠다는 피드백 받음
     private static Map<String, List<Map<String, String>>> fileList;
 
     CSVHandler csvHandler = new CSVHandler();
@@ -77,5 +78,4 @@ public class InputHandler {
     private void insert(String input) {
 
     }
-
 }
