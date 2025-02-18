@@ -35,11 +35,11 @@ public class LogFileReader {
             }
             logDataList.add(dataSet);
         }
-        parseLogData(logDataList);
+        dataToList(logDataList);
     }
 
     // TODO : 메서드 이름 수정
-    private void parseLogData(List<String[]> logDataList) {
+    private void dataToList(List<String[]> logDataList) {
         for (String[] logData : logDataList) {
             String logLevel, logProcess, logMessage;
             LocalTime logTime;
