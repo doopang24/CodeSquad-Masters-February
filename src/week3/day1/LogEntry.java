@@ -14,4 +14,24 @@ public class LogEntry {
         this.logProcess = logProcess;
         this.logMessage = logMessage;
     }
+
+    public String getLogLevel() {
+        return logLevel;
+    }
+
+    public LocalTime getLogTime() {
+        return logTime;
+    }
+
+    public String getLogProcess() {
+        return logProcess;
+    }
+
+    public String getLogMessage() {
+        return logMessage;
+    }
+
+    public String entryToString() {
+        return logLevel + "\t" + logTime.toString() + "\t" + logProcess + "\t" + logMessage;
+    }
 }
