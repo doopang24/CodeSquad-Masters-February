@@ -8,11 +8,11 @@ public class FigureFactory {
         int vertex = coordinateList.size();
         switch (vertex) {
             case 2:
-                Figure line = new Line(coordinateList.get(0), coordinateList.get(1));
+                Figure line = new Line(coordinateList);
                 line.printResult();
                 break;
             case 3:
-                Figure triangle = new Triangle(coordinateList.get(0), coordinateList.get(1), coordinateList.get(2));
+                Figure triangle = new Triangle(coordinateList);
                 triangle.printResult();
                 break;
             case 5:
