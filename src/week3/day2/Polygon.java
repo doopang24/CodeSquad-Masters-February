@@ -1,5 +1,6 @@
 package week3.day2;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
@@ -18,7 +19,11 @@ public class Polygon implements Figure {
         Coordinate basePoint = coordinateList.getFirst();
 
         for (int i = 1; i < coordinateList.size() - 1; i++) {
-            Triangle triangle = new Triangle(basePoint, coordinateList.get(i), coordinateList.get(i + 1));
+            List<Coordinate> temp = new ArrayList<>();
+            temp.add(basePoint);
+            temp.add(coordinateList.get(i));
+            temp.add(coordinateList.get(i + 1));
+            Triangle triangle = new Triangle(temp);
             totalArea += triangle.calculateArea();
         }
         return totalArea;
@@ -26,6 +31,8 @@ public class Polygon implements Figure {
 
     @Override
     public void printResult() {
+        CoordinatePlane plane = new CoordinatePlane();
+        plane.displayResult(coordinateList);
         System.out.println("면적 : " + calculateArea());
     }
 
