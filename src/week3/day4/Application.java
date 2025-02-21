@@ -15,7 +15,6 @@ public class Application {
             System.out.println(e.getMessage());
         }
 
-
         try {
             String arrayPointer = memory.malloc("int", 4);
             System.out.println("arrayPointer : " + arrayPointer);
@@ -30,6 +29,17 @@ public class Application {
             System.out.println(e.getMessage());
         }
 
+        for (String allocation : memory.heapDump()) {
+            System.out.println("사용 중인 상태 : \n" + allocation);
+        }
 
+        memory.usage();
+
+        String arrayPointer = "20";
+        memory.free(arrayPointer);
+
+        for (String allocation : memory.heapDump()) {
+            System.out.println("사용 중인 상태 : \n" + allocation);
+        }
     }
 }
