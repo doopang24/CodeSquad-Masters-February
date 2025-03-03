@@ -57,3 +57,417 @@
         }
         highlightTime(hour, minute, second);
     }
+    // 해당하는 시간을 밝게 표시
+    private void highlightTime(int hour, int minute, int second) {
+        switch (hour) {
+            case 1:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][1].setFill(Color.WHITE);
+                break;
+            case 2:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][2].setFill(Color.WHITE);
+                break;
+            case 3:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][3].setFill(Color.WHITE);
+                break;
+            case 4:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[2][0].setFill(Color.WHITE);
+                break;
+            case 5:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[2][1].setFill(Color.WHITE);
+                break;
+            case 6:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[2][2].setFill(Color.WHITE);
+                textGrid[2][3].setFill(Color.WHITE);
+                break;
+            case 7:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[3][0].setFill(Color.WHITE);
+                textGrid[3][1].setFill(Color.WHITE);
+                break;
+            case 8:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[3][2].setFill(Color.WHITE);
+                textGrid[3][3].setFill(Color.WHITE);
+                break;
+            case 9:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[4][0].setFill(Color.WHITE);
+                textGrid[4][1].setFill(Color.WHITE);
+                break;
+            case 10:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                break;
+            case 11:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                textGrid[1][1].setFill(Color.WHITE);
+                break;
+            case 12:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][1].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                textGrid[1][2].setFill(Color.WHITE);
+                break;
+            case 13:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][1].setFill(Color.WHITE);
+                break;
+            case 14:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][2].setFill(Color.WHITE);
+                break;
+            case 15:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][3].setFill(Color.WHITE);
+                break;
+            case 16:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[2][0].setFill(Color.WHITE);
+                break;
+            case 17:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[2][1].setFill(Color.WHITE);
+                break;
+            case 18:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[2][2].setFill(Color.WHITE);
+                textGrid[2][3].setFill(Color.WHITE);
+                break;
+            case 19:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[3][0].setFill(Color.WHITE);
+                textGrid[3][1].setFill(Color.WHITE);
+                break;
+            case 20:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[3][2].setFill(Color.WHITE);
+                textGrid[3][3].setFill(Color.WHITE);
+                break;
+            case 21:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[4][0].setFill(Color.WHITE);
+                textGrid[4][1].setFill(Color.WHITE);
+                break;
+            case 22:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                break;
+            case 23:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                textGrid[1][1].setFill(Color.WHITE);
+                break;
+            case 24:
+                textGrid[0][0].setFill(Color.WHITE);
+                textGrid[0][2].setFill(Color.WHITE);
+                textGrid[1][0].setFill(Color.WHITE);
+                textGrid[1][2].setFill(Color.WHITE);
+                break;
+        }
+        textGrid[4][2].setFill(Color.WHITE);
+
+        switch (minute) {
+            case 0:
+                textGrid[0][3].setFill(Color.WHITE);
+                break;
+            case 1:
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 2:
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 3:
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 4:
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 5:
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 6:
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 7:
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 8:
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 9:
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+            case 10:
+                textGrid[6][0].setFill(Color.WHITE);
+                break;
+            case 11:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 12:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 13:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 14:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 15:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 16:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 17:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 18:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 19:
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+            case 20:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                break;
+            case 21:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 22:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 23:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 24:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 25:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 26:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 27:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 28:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 29:
+                textGrid[5][0].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+            case 30:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                break;
+            case 31:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 32:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 33:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 34:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 35:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 36:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 37:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 38:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 39:
+                textGrid[5][1].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+            case 40:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                break;
+            case 41:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 42:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 43:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 44:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 45:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 46:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 47:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 48:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 49:
+                textGrid[5][2].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+            case 50:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                break;
+            case 51:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][1].setFill(Color.WHITE);
+                break;
+            case 52:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][2].setFill(Color.WHITE);
+                break;
+            case 53:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[6][3].setFill(Color.WHITE);
+                break;
+            case 54:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][0].setFill(Color.WHITE);
+                break;
+            case 55:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][1].setFill(Color.WHITE);
+                break;
+            case 56:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][2].setFill(Color.WHITE);
+                break;
+            case 57:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[7][3].setFill(Color.WHITE);
+                break;
+            case 58:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][0].setFill(Color.WHITE);
+                break;
+            case 59:
+                textGrid[5][3].setFill(Color.WHITE);
+                textGrid[6][0].setFill(Color.WHITE);
+                textGrid[8][1].setFill(Color.WHITE);
+                break;
+        }
+        textGrid[8][2].setFill(Color.WHITE);
+
+        String[] secondToHangul = secondToHangul(second);
+        tenSecondText.setText(secondToHangul[0]);
+        oneSecondText.setText(secondToHangul[1]);
+
+        tenSecondText.setFill(Color.WHITE);
+        oneSecondText.setFill(Color.WHITE);
+    }
