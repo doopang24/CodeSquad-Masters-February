@@ -471,3 +471,13 @@
         tenSecondText.setFill(Color.WHITE);
         oneSecondText.setFill(Color.WHITE);
     }
+    private String[] secondToHangul(int second) {
+        String[] hangulNumbers = {"", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"};
+        int ten = second / 10;
+        int one = second % 10;
+
+        String tenHangul = ten > 0 ? hangulNumbers[ten] + "십" : "";
+        String oneHangul = hangulNumbers[one] + "초";
+
+        return new String[]{tenHangul, oneHangul};
+    }
