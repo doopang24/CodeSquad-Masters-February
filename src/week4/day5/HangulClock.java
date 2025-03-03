@@ -1,3 +1,46 @@
+package week4.day5;
+
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
+import javafx.util.Duration;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+
+public class HangulClock extends Application {
+
+    private final String[][] WORDS = {
+            {"오", "전", "후", "영"},
+            {"열", "한", "두", "세"},
+            {"네", "다", "여", "섯"},
+            {"일", "곱", "여", "덟"},
+            {"아", "홉", "시", ""},
+            {"이", "삼", "사", "오"},
+            {"십", "일", "이", "삼"},
+            {"사", "오", "육", "칠"},
+            {"팔", "구", "분", ""}
+    };
+
+    // 12시간제, 분 단위, 초 단위의 형태
+    private final DateTimeFormatter HOUR_FORMAT = DateTimeFormatter.ofPattern("HH");
+    private final DateTimeFormatter MINUTE_FORMAT = DateTimeFormatter.ofPattern("m");
+    private final DateTimeFormatter SECOND_FORMAT = DateTimeFormatter.ofPattern("s");
+
+    // UI에 표시된 Text 객체들에 접근해서 색을 변경하기 위해 필요하다
+    private Text[][] textGrid = new Text[WORDS.length][WORDS[0].length];
+
+    // 초 표시용 HBox
+    private VBox secondDisplay = new VBox();        // 수직 구조물
+    private Text tenSecondText = new Text(" "); // 십의 자리 초
+    private Text oneSecondText = new Text("초"); // 일의 자리 초
+
     @Override
     public void start(Stage primaryStage) {
         GridPane grid = new GridPane();
@@ -43,6 +86,7 @@
         // 창을 화면에 표시
         primaryStage.show();
     }
+
     private void updateClock() {
         LocalTime now = LocalTime.now();
         int hour = Integer.parseInt(now.format(HOUR_FORMAT));
@@ -57,6 +101,7 @@
         }
         highlightTime(hour, minute, second);
     }
+
     // 해당하는 시간을 밝게 표시
     private void highlightTime(int hour, int minute, int second) {
         switch (hour) {
@@ -471,6 +516,7 @@
         tenSecondText.setFill(Color.WHITE);
         oneSecondText.setFill(Color.WHITE);
     }
+
     private String[] secondToHangul(int second) {
         String[] hangulNumbers = {"", "일", "이", "삼", "사", "오", "육", "칠", "팔", "구"};
         int ten = second / 10;
@@ -481,3 +527,8 @@
 
         return new String[]{tenHangul, oneHangul};
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}
