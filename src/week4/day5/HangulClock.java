@@ -43,3 +43,17 @@
         // 창을 화면에 표시
         primaryStage.show();
     }
+    private void updateClock() {
+        LocalTime now = LocalTime.now();
+        int hour = Integer.parseInt(now.format(HOUR_FORMAT));
+        int minute = Integer.parseInt(now.format(MINUTE_FORMAT));
+        int second = Integer.parseInt(now.format(SECOND_FORMAT));
+
+        // 모든 글자 회색으로 초기화
+        for (int i = 0; i < WORDS.length; i++) {
+            for (int j = 0; j < WORDS[i].length; j++) {
+                textGrid[i][j].setFill(Color.GRAY);
+            }
+        }
+        highlightTime(hour, minute, second);
+    }
